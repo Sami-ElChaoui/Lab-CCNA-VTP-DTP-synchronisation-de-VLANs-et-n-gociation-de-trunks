@@ -11,7 +11,7 @@ Dans un réseau avec plusieurs switchs, ajouter ou modifier un VLAN à la main s
 
 3 switchs interconnectés, 9 PC répartis dessus, 4 VLANs différents configurés sur le réseau.
 
-![[lab_DTP_VTP.png]]
+![alt text](img/lab_DTP_VTP.png)
 
 ### 3. Ce que j'ai fait
 
@@ -31,12 +31,12 @@ Dans un réseau avec plusieurs switchs, ajouter ou modifier un VLAN à la main s
 
 Test de communication entre PC d'un même VLAN (réussi) et vérification de l'absence de communication entre VLANs différents (comportement attendu, pas de routage inter-VLAN configuré dans ce lab). Vérification de la table VLAN sur chaque switch selon son mode VTP pour confirmer la synchronisation (ou son absence).
 
-![[Pasted image 20260906135653.png]]
+![alt text](img/VTP.png)
 *`show vtp status` sur les 3 switchs : SW1 (serveur) et SW3 (client) partagent la même Configuration Revision (6) et le même nombre de VLANs (8), preuve de la synchronisation. SW2 (transparent) reste à la révision 0 avec 9 VLANs — sa propre base locale, non synchronisée.*
 
 J'ai également vérifié, sur les interfaces entre les switchs, que le mode administratif était bien en trunk et que DTP était désactivé.
 
-![[Pasted image 20260906135445.png]]
+![alt text](img/DTP.png)
 *Capture 2 — `show interface switchport` : Administrative et Operational Mode confirmés en "trunk" sur les liens entre switchs, avec "Negotiation of Trunking: Off", confirmant la désactivation de DTP après établissement manuel des trunks.*
 
 ### 6. Ce que j'ai appris
