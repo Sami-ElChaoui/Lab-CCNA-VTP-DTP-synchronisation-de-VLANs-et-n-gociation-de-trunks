@@ -11,7 +11,7 @@ Dans un réseau avec plusieurs switchs, ajouter ou modifier un VLAN à la main s
 
 3 switchs interconnectés, 9 PC répartis dessus, 4 VLANs différents configurés sur le réseau.
 
-![[Pasted image 20260906132706.png]]
+![[lab_DTP_VTP.png]]
 
 ### 3. Ce que j'ai fait
 
